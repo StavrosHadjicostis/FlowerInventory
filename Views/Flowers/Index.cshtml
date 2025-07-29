@@ -1,0 +1,43 @@
+@* @model IEnumerable<FlowerInventory.Models.Flower>
+@{
+    ViewData["Title"] = "Flowers";
+}
+<h1>Flower Inventory</h1>
+
+<form method="get">
+    <input type="text" name="searchString" placeholder="Search by name" />
+    <select name="sortOrder">
+        <option value="">Sort by</option>
+        <option value="name">Name</option>
+        <option value="price">Price</option>
+    </select>
+    <button type="submit">Search</button>
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var flower in Model)
+        {
+            <tr>
+                <td>@flower.Name</td>
+                <td>@flower.Category?.Name</td>
+                <td>@flower.Price</td>
+                <td>
+                    <a href="@Url.Action("Details", new { id = flower.Id })">Details</a> |
+                    <a href="@Url.Action("Upsert", new { id = flower.Id })">Edit</a> |
+                    <a href="@Url.Action("Delete", new { id = flower.Id })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Upsert")">Add New Flower</a> *@

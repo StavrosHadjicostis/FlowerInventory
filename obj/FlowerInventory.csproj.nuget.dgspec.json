@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\shadji03\\Documents\\FlowerInventory\\FlowerInventory.csproj": {}
+    "C:\\Users\\stavx\\Documents\\FlowerInventory\\FlowerInventory.csproj": {}
   },
   "projects": {
-    "C:\\Users\\shadji03\\Documents\\FlowerInventory\\FlowerInventory.csproj": {
+    "C:\\Users\\stavx\\Documents\\FlowerInventory\\FlowerInventory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\shadji03\\Documents\\FlowerInventory\\FlowerInventory.csproj",
+        "projectUniqueName": "C:\\Users\\stavx\\Documents\\FlowerInventory\\FlowerInventory.csproj",
         "projectName": "FlowerInventory",
-        "projectPath": "C:\\Users\\shadji03\\Documents\\FlowerInventory\\FlowerInventory.csproj",
-        "packagesPath": "C:\\Users\\shadji03\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\shadji03\\Documents\\FlowerInventory\\obj\\",
+        "projectPath": "C:\\Users\\stavx\\Documents\\FlowerInventory\\FlowerInventory.csproj",
+        "packagesPath": "C:\\Users\\stavx\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\stavx\\Documents\\FlowerInventory\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\shadji03\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\stavx\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.303/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

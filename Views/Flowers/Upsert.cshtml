@@ -1,0 +1,11 @@
+@* @model FlowerInventory.Models.Flower
+<h2>@(Model.Id == 0 ? "Add Flower" : "Edit Flower")</h2>
+
+<form method="post">
+    <label>Name:</label>
+    <input type="text" asp-for="Name" />
+    <label>Price:</label>
+    <input type="number" asp-for="Price" />
+    <button type="submit">Save</button>
+</form>
+<a href="@Url.Action("Index")">Cancel</a> *@
