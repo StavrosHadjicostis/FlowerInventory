@@ -1,4 +1,4 @@
-@* @model FlowerInventory.Models.Flower
+@model FlowerInventory.Models.Flower
 <h2>@(Model.Id == 0 ? "Add Flower" : "Edit Flower")</h2>
 
 <form method="post">
@@ -8,4 +8,4 @@
     <input type="number" asp-for="Price" />
     <button type="submit">Save</button>
 </form>
-<a href="@Url.Action("Index")">Cancel</a> *@
+<a href="@Url.Action("Index")">Cancel</a>

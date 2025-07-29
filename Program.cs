@@ -1,7 +1,17 @@
+using FlowerInventory.Models;
+using FlowerInventory.Services;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<FlowerInventoryDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("FlowerDb")));
+builder.Services.AddScoped<IFlowerService, FlowerService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+
+
 
 var app = builder.Build();
 
