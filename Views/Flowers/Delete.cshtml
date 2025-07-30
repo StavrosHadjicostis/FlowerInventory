@@ -1,6 +1,23 @@
 @model FlowerInventory.Models.Flower
-<h2>Are you sure you want to delete @Model.Name?</h2>
-<form method="post">
-    <button type="submit">Yes, delete</button>
-    <a href="@Url.Action("Index")">Cancel</a>
-</form>
+
+<div class="container my-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-danger text-white">
+            <h2 class="mb-0">⚠️ Delete Confirmation</h2>
+        </div>
+        <div class="card-body">
+            <p class="fs-5">Are you sure you want to delete <strong>@Model.Name</strong>?</p>
+            <p class="text-muted">This action cannot be undone.</p>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <a href="@Url.Action("Index")" class="btn btn-secondary">
+                <i class="bi bi-arrow-left"></i> Cancel
+            </a>
+            <form method="post" class="d-inline">
+                <button type="submit" class="btn btn-danger">
+                    <i class="bi bi-trash"></i> Yes, Delete
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

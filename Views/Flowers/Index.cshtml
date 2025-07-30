@@ -2,42 +2,66 @@
 @{
     ViewData["Title"] = "Flowers";
 }
-<h1>Flower Inventory</h1>
 
-<form method="get">
-    <input type="text" name="searchString" placeholder="Search by name" />
-    <select name="sortOrder">
-        <option value="">Sort by</option>
-        <option value="name">Name</option>
-        <option value="price">Price</option>
-    </select>
-    <button type="submit">Search</button>
-</form>
+<div class="container my-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="fw-bold">🌸 Flower Inventory</h1>
+        <a href="@Url.Action("Upsert")" class="btn btn-success">
+            <i class="bi bi-plus-lg"></i> Add New Flower
+        </a>
+    </div>
 
-<table>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Price</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var flower in Model)
-        {
-            <tr>
-                <td>@flower.Name</td>
-                <td>@flower.Category?.Name</td>
-                <td>@flower.Price</td>
-                <td>
-                    <a href="@Url.Action("Details", new { id = flower.Id })">Details</a> |
-                    <a href="@Url.Action("Upsert", new { id = flower.Id })">Edit</a> |
-                    <a href="@Url.Action("Delete", new { id = flower.Id })">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <!-- Search & Sort -->
+    <form method="get" class="row g-2 mb-4">
+        <div class="col-md-6">
+            <input type="text" name="searchString" class="form-control" placeholder="Search by name..." />
+        </div>
+        <div class="col-md-3">
+            <select name="sortOrder" class="form-select">
+                <option value="">Sort by</option>
+                <option value="name">Name</option>
+                <option value="price">Price</option>
+            </select>
+        </div>
+        <div class="col-md-3 d-grid">
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-search"></i> Search
+            </button>
+        </div>
+    </form>
 
-<a href="@Url.Action("Upsert")">Add New Flower</a>
+    <!-- Flowers Table -->
+    <div class="table-responsive shadow-sm rounded">
+        <table class="table table-striped table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var flower in Model)
+                {
+                    <tr>
+                        <td>@flower.Name</td>
+                        <td>@flower.Category?.Name</td>
+                        <td>€@flower.Price.ToString("0.00")</td>
+                        <td class="text-center">
+                            <a href="@Url.Action("Details", new { id = flower.Id })" class="btn btn-sm btn-info">
+                                <i class="bi bi-eye"></i> Details
+                            </a>
+                            <a href="@Url.Action("Upsert", new { id = flower.Id })" class="btn btn-sm btn-warning">
+                                <i class="bi bi-pencil-square"></i> Edit
+                            </a>
+                            <a href="@Url.Action("Delete", new { id = flower.Id })" class="btn btn-sm btn-danger">
+                                <i class="bi bi-trash"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
