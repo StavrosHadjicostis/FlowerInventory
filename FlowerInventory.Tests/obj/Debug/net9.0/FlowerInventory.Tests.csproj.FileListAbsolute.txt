@@ -172,14 +172,3 @@ C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\
 C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\obj\FlowerInventory.Tests.csproj.nuget.dgspec.json
 C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\obj\project.assets.json
 C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\obj\Debug\net9.0\FlowerInventory.Tests.sourcelink.json
-C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\appsettings.Development.json
-C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\appsettings.json
-C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.deps.json
-C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.runtimeconfig.json
-C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.staticwebassets.endpoints.json
-C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.staticwebassets.runtime.json
-C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests.deps.json
-C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests.runtimeconfig.json
-C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\obj\FlowerInventory.Tests.csproj.nuget.dgspec.json
-C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\obj\project.assets.json
-C:\Users\stavx\Documents\FlowerInventory\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\bin\Debug\net9.0\FlowerInventory.Tests\obj\Debug\net9.0\FlowerInventory.Tests.sourcelink.json
