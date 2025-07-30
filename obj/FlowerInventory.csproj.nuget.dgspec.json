@@ -62,6 +62,10 @@
               "target": "Package",
               "version": "[9.0.7, )"
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.9.3, )"
