@@ -5,13 +5,16 @@ using FlowerInventory.Services;
 public class FlowersController : Controller
 {
     private readonly IFlowerService _flowerService;
+    private readonly ICategoryService _categoryService;
 
-    public FlowersController(IFlowerService flowerService)
+    public FlowersController(IFlowerService flowerService, ICategoryService categoryService)
     {
         _flowerService = flowerService;
+        _categoryService = categoryService;
     }
 
     // GET: Flowers (Home page with search & sort)
+    [HttpGet("")]
     public IActionResult Index(string searchString, string sortOrder)
     {
         var flowers = _flowerService.GetAll();
@@ -34,6 +37,7 @@ public class FlowersController : Controller
     }
 
     // GET: Details
+    [HttpGet("Details")]
     public IActionResult Details(int id)
     {
         var flower = _flowerService.GetById(id);
@@ -42,8 +46,10 @@ public class FlowersController : Controller
     }
 
     // GET: Add/Edit
+    [HttpGet("Upsert/{id?}")]
     public IActionResult Upsert(int? id)
     {
+        ViewBag.Categories = _categoryService.GetAll();
         if (id == null) return View(new Flower());
         var flower = _flowerService.GetById(id.Value);
         if (flower == null) return NotFound();
@@ -51,10 +57,22 @@ public class FlowersController : Controller
     }
 
     // POST: Add/Edit
-    [HttpPost]
+   [HttpPost("Upsert/{id?}")]
     public IActionResult Upsert(Flower flower)
     {
-        if (!ModelState.IsValid) return View(flower);
+        ModelState.Remove("Category"); 
+        Console.WriteLine($"ModelState valid: {ModelState.IsValid}");
+        foreach (var state in ModelState)
+        {
+            foreach (var error in state.Value.Errors)
+            {
+                Console.WriteLine($"{state.Key}: {error.ErrorMessage}");
+            }
+        }
+        if (!ModelState.IsValid) {
+            ViewBag.Categories = _categoryService.GetAll();
+            return View(flower);
+        }
         if (flower.Id == 0) _flowerService.Add(flower);
         else _flowerService.Update(flower);
         return RedirectToAction(nameof(Index));
